@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bug-reproducer
+spec:
+  containers:
+  - command:
+    - python
+    - -m
+    - SimpleHTTPServer
+    -  "8081"
+    image: ibotty/tsung:latest
+    name: bug-reproducer
